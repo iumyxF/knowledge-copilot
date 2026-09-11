@@ -34,9 +34,3 @@ build/
 .vscode/
 /file
 /logs
-
-### CUSTOMER ###
-.agents
-/*.md
-/*.json
-docsIgnore
