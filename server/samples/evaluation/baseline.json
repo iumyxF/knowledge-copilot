@@ -1,0 +1,346 @@
+{
+  "knowledgeBaseId": "1",
+  "name": "rag-baseline-v1",
+  "description": "自编中文示例，导入前替换知识库和文档ID",
+  "documentMapping": {
+    "product": "1",
+    "policy": "2",
+    "faq": "3",
+    "rules": "4",
+    "operations": "5"
+  },
+  "cases": [
+    {
+      "question": "GX-3000 的额定功率是多少？",
+      "expectedAnswer": "800W",
+      "relevantDocumentKeys": [
+        "product"
+      ],
+      "evidence": [
+        {
+          "documentKey": "product",
+          "text": "额定功率为 800W"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "设备允许的工作温度范围？",
+      "expectedAnswer": "5℃ 至 35℃",
+      "relevantDocumentKeys": [
+        "product"
+      ],
+      "evidence": [
+        {
+          "documentKey": "product",
+          "text": "工作环境温度为 5℃ 至 35℃"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "设备保修多长时间，从哪天开始？",
+      "expectedAnswer": "24个月，自购买发票日期开始",
+      "relevantDocumentKeys": [
+        "product"
+      ],
+      "evidence": [
+        {
+          "documentKey": "product",
+          "text": "设备标准保修期为 24 个月，以购买发票日期为起点"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "购买后多久可以申请退货？",
+      "expectedAnswer": "7天内，未损坏且配件齐全",
+      "relevantDocumentKeys": [
+        "policy"
+      ],
+      "evidence": [
+        {
+          "documentKey": "policy",
+          "text": "设备购买后 7 天内，在未损坏且配件齐全的条件下可申请退货"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "退货需要提供什么材料？",
+      "expectedAnswer": "购买发票和设备序列号",
+      "relevantDocumentKeys": [
+        "policy"
+      ],
+      "evidence": [
+        {
+          "documentKey": "policy",
+          "text": "申请退货必须提供购买发票和设备序列号"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "保修范围内维修的运输费用由谁承担？",
+      "expectedAnswer": "公司承担",
+      "relevantDocumentKeys": [
+        "policy"
+      ],
+      "evidence": [
+        {
+          "documentKey": "policy",
+          "text": "运输费由公司承担"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "设备序列号在哪里？",
+      "expectedAnswer": "设备底部铭牌",
+      "relevantDocumentKeys": [
+        "faq"
+      ],
+      "evidence": [
+        {
+          "documentKey": "faq",
+          "text": "序列号位于设备底部铭牌"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "忘记管理密码如何恢复？",
+      "expectedAnswer": "长按复位键10秒恢复出厂设置",
+      "relevantDocumentKeys": [
+        "faq"
+      ],
+      "evidence": [
+        {
+          "documentKey": "faq",
+          "text": "长按复位键 10 秒可恢复出厂设置"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "客服收到投诉后首次响应时限？",
+      "expectedAnswer": "2个工作小时",
+      "relevantDocumentKeys": [
+        "rules"
+      ],
+      "evidence": [
+        {
+          "documentKey": "rules",
+          "text": "客服收到投诉后应在 2 个工作小时内首次响应"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "投诉多久未解决需要升级，由谁处理？",
+      "expectedAnswer": "超过48小时升级服务主管",
+      "relevantDocumentKeys": [
+        "rules"
+      ],
+      "evidence": [
+        {
+          "documentKey": "rules",
+          "text": "超过 48 小时未解决的投诉，应升级给服务主管"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "滤网清洗后可以直接装回吗？",
+      "expectedAnswer": "完全晾干后再装回",
+      "relevantDocumentKeys": [
+        "operations"
+      ],
+      "evidence": [
+        {
+          "documentKey": "operations",
+          "text": "滤网应使用清水冲洗，完全晾干后再装回设备"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "日常巡检多久一次，记录什么？",
+      "expectedAnswer": "每周一次，电源线、滤网、运行噪声",
+      "relevantDocumentKeys": [
+        "operations"
+      ],
+      "evidence": [
+        {
+          "documentKey": "operations",
+          "text": "日常巡检每周一次，记录电源线、滤网和运行噪声"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "single-document"
+      ]
+    },
+    {
+      "question": "E17 表示什么，清洗前应做哪些准备？",
+      "expectedAnswer": "滤网堵塞；断电并冷却至少15分钟",
+      "relevantDocumentKeys": [
+        "product",
+        "operations"
+      ],
+      "evidence": [
+        {
+          "documentKey": "product",
+          "text": "E17 错误表示进风滤网堵塞"
+        },
+        {
+          "documentKey": "operations",
+          "text": "清洁滤网前必须断开电源，等待设备冷却至少 15 分钟"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "multi-document"
+      ]
+    },
+    {
+      "question": "申请退货需要序列号吗，从哪里找到？",
+      "expectedAnswer": "需要，设备底部铭牌",
+      "relevantDocumentKeys": [
+        "policy",
+        "faq"
+      ],
+      "evidence": [
+        {
+          "documentKey": "policy",
+          "text": "申请退货必须提供购买发票和设备序列号"
+        },
+        {
+          "documentKey": "faq",
+          "text": "序列号位于设备底部铭牌"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "multi-document"
+      ]
+    },
+    {
+      "question": "保修期限多长，保修维修要付哪些费用？",
+      "expectedAnswer": "24个月，范围内人工配件免费，运输公司承担",
+      "relevantDocumentKeys": [
+        "product",
+        "policy"
+      ],
+      "evidence": [
+        {
+          "documentKey": "product",
+          "text": "设备标准保修期为 24 个月"
+        },
+        {
+          "documentKey": "policy",
+          "text": "保修范围内的维修免收人工费和配件费，运输费由公司承担"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "multi-document"
+      ]
+    },
+    {
+      "question": "E17处理后仍报错应联系谁，人工客服何时工作？",
+      "expectedAnswer": "记录错误码和序列号联系人工客服，周一至周五09:00至18:00",
+      "relevantDocumentKeys": [
+        "faq",
+        "policy"
+      ],
+      "evidence": [
+        {
+          "documentKey": "faq",
+          "text": "记录错误码和序列号，联系人工客服"
+        },
+        {
+          "documentKey": "policy",
+          "text": "人工客服工作时间为周一至周五 09:00 至 18:00"
+        }
+      ],
+      "expectedRefusal": false,
+      "tags": [
+        "multi-document"
+      ]
+    },
+    {
+      "question": "GX-3000 的销售价格是多少？",
+      "expectedAnswer": "当前知识库没有足够的信息回答该问题。",
+      "relevantDocumentKeys": [],
+      "evidence": [],
+      "expectedRefusal": true,
+      "tags": [
+        "no-answer"
+      ]
+    },
+    {
+      "question": "公司董事长的姓名是什么？",
+      "expectedAnswer": "当前知识库没有足够的信息回答该问题。",
+      "relevantDocumentKeys": [],
+      "evidence": [],
+      "expectedRefusal": true,
+      "tags": [
+        "no-answer"
+      ]
+    },
+    {
+      "question": "设备是否支持蓝牙连接？",
+      "expectedAnswer": "当前知识库没有足够的信息回答该问题。",
+      "relevantDocumentKeys": [],
+      "evidence": [],
+      "expectedRefusal": true,
+      "tags": [
+        "no-answer"
+      ]
+    },
+    {
+      "question": "今天上海的天气如何？",
+      "expectedAnswer": "当前知识库没有足够的信息回答该问题。",
+      "relevantDocumentKeys": [],
+      "evidence": [],
+      "expectedRefusal": true,
+      "tags": [
+        "no-answer"
+      ]
+    }
+  ]
+}

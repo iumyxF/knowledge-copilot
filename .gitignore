@@ -34,3 +34,10 @@ build/
 .vscode/
 /file
 /logs
+
+# Backend local runtime data and credentials
+/server/data/
+/server/logs/
+/server/.env
+/server/application-local.yml
+/server/src/main/resources/application-local.yml

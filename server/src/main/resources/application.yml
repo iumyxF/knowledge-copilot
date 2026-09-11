@@ -1,0 +1,62 @@
+server:
+  port: ${SERVER_PORT:8080}
+spring:
+  application:
+    name: knowledge-copilot
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/knowledge_copilot?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:Root@123456}
+  servlet:
+    multipart:
+      max-file-size: ${MAX_FILE_SIZE:20MB}
+      max-request-size: 21MB
+  flyway:
+    enabled: true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    banner: false
+knife4j:
+  # 4.5.0 增强定制器与 springdoc 2.8 的集合返回类型不兼容；保留完整文档 UI。
+  enable: false
+  setting:
+    language: zh_cn
+springdoc:
+  api-docs:
+    version: OPENAPI_3_0
+copilot:
+  storage-root: ${STORAGE_ROOT:./data/documents}
+  max-file-bytes: ${MAX_FILE_BYTES:20971520}
+  chunk-tokens: 500
+  overlap-tokens: 50
+  context-tokens: 3000
+  top-k: 5
+  min-score: 0.0
+  candidate-limit: 100
+  ingestion-workers: 2
+  ingestion-queue: 20
+  evaluation-workers: 1
+  evaluation-queue: 5
+  embedding-batch-size: 16
+  elasticsearch:
+    url: ${ELASTICSEARCH_URL:http://localhost:9200}
+    username: ${ELASTICSEARCH_USERNAME:}
+    password: ${ELASTICSEARCH_PASSWORD:}
+    index: ${ELASTICSEARCH_INDEX:knowledge-copilot-v1}
+  chat:
+    enabled: ${CHAT_ENABLED:false}
+    base-url: ${CHAT_BASE_URL:https://api.openai.com/v1}
+    api-key: ${CHAT_API_KEY:}
+    model-name: ${CHAT_MODEL:}
+    timeout-seconds: 60
+    max-retries: 1
+  embedding:
+    enabled: ${EMBEDDING_ENABLED:false}
+    base-url: ${EMBEDDING_BASE_URL:https://api.openai.com/v1}
+    api-key: ${EMBEDDING_API_KEY:}
+    model-name: ${EMBEDDING_MODEL:}
+    dimension: ${EMBEDDING_DIMENSION:0}
+    timeout-seconds: 60
+    max-retries: 1
